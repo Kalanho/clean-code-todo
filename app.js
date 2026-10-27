@@ -113,7 +113,7 @@ function taskIncomplete(event) {
 }
 
 function bindTaskItemEvents(taskItem, onToggleStatus) {
-  taskItem.querySelector('input[type=checkbox]').addEventListener('change', onToggleStatus);
+  taskItem.querySelector('input[type=checkbox]').onchange = onToggleStatus;
   taskItem.querySelector('button.edit').addEventListener('click', editTask);
   taskItem.querySelector('button.delete').addEventListener('click', deleteTask);
 }
